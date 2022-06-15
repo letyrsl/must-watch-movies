@@ -4,8 +4,8 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  line-height: 1.6;
-  font-size: 18px;
+  line-height: 1.5;
+  font-size: 16px;
 }
 
 * {
@@ -13,7 +13,7 @@ body {
 }
 
 a {
-  color: #0070f3;
+  display: block;
   text-decoration: none !important;
 }
 
@@ -22,6 +22,12 @@ img {
   display: block;
 }
 
-.container-fluid {
-  padding: 0 4rem;
+header {
+  padding: .5rem;
+  box-shadow: none !important;
+  border-bottom: 1px solid #e0e6dc;
+}
+
+.border-radius-15 {
+  border-radius: 15px;
 }

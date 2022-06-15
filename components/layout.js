@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import CustomizedLink from '../components/link'
+import CustomizedLink from './customizedLink'
 
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar'
@@ -28,20 +28,18 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <header>
-        <AppBar position='static' color='transparent'>
-          <Toolbar sx={{ mx: 5 }}>
-            <CustomizedLink href='/' title='Acessar página principal'>
-              <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                <LiveTvIcon fontSize='large' />
-                <Typography sx={{ m: 2, fontSize: '1.5rem' }}>
-                  {siteTitle}
-                </Typography>
-              </Box>
-            </CustomizedLink>
-          </Toolbar>
-        </AppBar>
-      </header>
+      <AppBar position='static' color='transparent'>
+        <Toolbar>
+          <CustomizedLink href='/' title='Acessar página principal'>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <LiveTvIcon fontSize='large' />
+              <Typography sx={{ mx: 2, fontSize: '1.5rem' }}>
+                {siteTitle}
+              </Typography>
+            </Box>
+          </CustomizedLink>
+        </Toolbar>
+      </AppBar>
 
       <main>{children}</main>
     </>
